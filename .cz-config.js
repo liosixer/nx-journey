@@ -15,7 +15,7 @@ module.exports = {
     { value: 'revert', name: 'revert:   回退' },
     { value: 'build', name: 'build:    打包' },
   ],
-  scopes: [{ name: 'config' }, { name: 'purchase' }, { name: 'tender' }, { name: 'libs' }, { name: 'shared' }],
+  scopes: [{ name: 'config' }, { name: 'tiny-url' }, { name: 'someapp' }, { name: 'libs' }, { name: 'shared' }],
   // 消息步骤
   messages: {
     type: '请选择提交类型:',
