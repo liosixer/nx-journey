@@ -1,16 +1,16 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/server-sudoku/src",
+  "sourceRoot": "apps/tiny-url/src",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/node:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/server-sudoku",
-        "main": "apps/server-sudoku/src/main.ts",
-        "tsConfig": "apps/server-sudoku/tsconfig.app.json",
-        "assets": ["apps/server-sudoku/src/assets"]
+        "outputPath": "dist/apps/tiny-url",
+        "main": "apps/tiny-url/src/main.ts",
+        "tsConfig": "apps/tiny-url/tsconfig.app.json",
+        "assets": ["apps/tiny-url/src/assets"]
       },
       "configurations": {
         "production": {
@@ -19,8 +19,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/server-sudoku/src/environments/environment.ts",
-              "with": "apps/server-sudoku/src/environments/environment.prod.ts"
+              "replace": "apps/tiny-url/src/environments/environment.ts",
+              "with": "apps/tiny-url/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -29,11 +29,11 @@
     "serve": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "server-sudoku:build"
+        "buildTarget": "tiny-url:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "server-sudoku:build:production"
+          "buildTarget": "tiny-url:build:production"
         }
       }
     },
@@ -41,14 +41,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/server-sudoku/**/*.ts"]
+        "lintFilePatterns": ["apps/tiny-url/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/server-sudoku"],
+      "outputs": ["coverage/apps/tiny-url"],
       "options": {
-        "jestConfig": "apps/server-sudoku/jest.config.ts",
+        "jestConfig": "apps/tiny-url/jest.config.ts",
         "passWithNoTests": true
       }
     }
